@@ -15,7 +15,7 @@ keywords = ["llama-index", "embeddings", "kjarni", "local", "offline", "rag"]
 
 [project.urls]
 Homepage = "https://kjarni.ai"
-Source = "https://github.com/olafurjohannsson/llama-index-embeddings-kjarni"
+Source = "https://github.com/kjarni-ai/llama-index-embeddings-kjarni"
 Documentation = "https://kjarni.ai/docs/"
 
 [project.optional-dependencies]
