@@ -1,0 +1,31 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "llama-index-embeddings-kjarni"
+version = "0.1.0"
+description = "LlamaIndex embeddings with Kjarni: local models in your own process, with no PyTorch, no ONNX Runtime and no server."
+readme = "README.md"
+license = "MIT"
+authors = [{ name = "Ólafur Aron Jóhannsson" }]
+requires-python = ">=3.10"
+dependencies = ["llama-index-core>=0.12,<0.15", "kjarni>=0.2.3"]
+keywords = ["llama-index", "embeddings", "kjarni", "local", "offline", "rag"]
+
+[project.urls]
+Homepage = "https://kjarni.ai"
+Source = "https://github.com/olafurjohannsson/llama-index-embeddings-kjarni"
+Documentation = "https://kjarni.ai/docs/"
+
+[project.optional-dependencies]
+test = ["pytest>=8", "pytest-asyncio>=0.23", "numpy"]
+
+[tool.hatch.build.targets.wheel]
+include = ["llama_index/"]
+
+[tool.hatch.build.targets.sdist]
+include = ["llama_index/", "tests/", "README.md", "LICENSE"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
